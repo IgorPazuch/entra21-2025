@@ -4,7 +4,10 @@ public class desviocondicional {
 
 	public static void main(String[] args) {
 		//exercicio1();
-		exercicio2();
+		//exercicio2();
+		exercicio3();
+		//exercicio4();
+		//exercicio5();
 	}
 	
 	static void exercicio1() {
@@ -36,6 +39,44 @@ public class desviocondicional {
 			System.out.println("Os dois números são iguais.");
 		}
 		
+	}
+	
+	static void exercicio3() {
+		Scanner entradaUser = new Scanner(System.in);
+		System.out.print("Digite o primeiro número: ");
+		int numero1 = entradaUser.nextInt();
+		
+		if (numero1 > 0) {
+			System.out.println("Seu número é positivo.");
+		} if (numero1 < 0) {
+			System.out.println("Seu número é negativo. ");
+		} else {
+			System.out.println("O valor do seu número é 0.");
+		}
+	}
+	
+	static void exercicio4() {
+		Scanner entradaUser = new Scanner(System.in);
+		System.out.print("Digite sua nota: ");
+		int nota = entradaUser.nextInt();
+		
+		if (nota > 6) {
+			System.out.println("Parabéns, você foi APROVADO!");
+		} if (nota < 6) {
+			System.out.println("Desculpe, você foi REPROVADO.");
+		}
+	}
+	
+	static void exercicio5() {
+		Scanner entradaUser = new Scanner(System.in);
+		System.out.print("Por favor, digite sua idade: ");
+		int idade = entradaUser.nextInt();
+		
+		if (idade >= 16) {
+			System.out.println("Você ESTÁ está apto a votar.");
+		} else {
+			System.out.println("Você NÃO apto a votar!");
+		}
 	}
 
 }
