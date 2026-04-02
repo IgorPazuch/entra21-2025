@@ -8,7 +8,8 @@ public class desviocondicional {
 		//exercicio3();
 		//exercicio4();
 		//exercicio5();
-		exercicio6();
+		//exercicio6();
+		exercicio7();
 	}
 	
 	static void exercicio1() {
@@ -97,6 +98,23 @@ public class desviocondicional {
 			System.out.println("O maior número é: " + numero2);
 		} else {
 			System.out.println("O maior número é: " + numero3);
+		}
+	}
+	
+	static void exercicio7() {
+		Scanner entradaUser = new Scanner(System.in);
+		
+		System.out.print("Digite a nota: ");
+		int nota = entradaUser.nextInt();
+		
+		if (nota <= 4) {
+			System.out.println("Insuficiente.");
+		} else if (nota <= 6) {
+			System.out.println("Regular.");
+		} else if (nota <= 8) {
+			System.out.println("Bom.");
+		} else {
+			System.out.println("Excelente.");
 		}
 	}
 
