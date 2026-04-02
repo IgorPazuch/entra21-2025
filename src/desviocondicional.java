@@ -48,7 +48,7 @@ public class desviocondicional {
 		
 		if (numero1 > 0) {
 			System.out.println("Seu número é positivo.");
-		} if (numero1 < 0) {
+		} else if (numero1 < 0) {
 			System.out.println("Seu número é negativo. ");
 		} else {
 			System.out.println("O valor do seu número é 0.");
