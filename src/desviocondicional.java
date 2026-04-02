@@ -5,9 +5,10 @@ public class desviocondicional {
 	public static void main(String[] args) {
 		//exercicio1();
 		//exercicio2();
-		exercicio3();
+		//exercicio3();
 		//exercicio4();
 		//exercicio5();
+		exercicio6();
 	}
 	
 	static void exercicio1() {
@@ -76,6 +77,26 @@ public class desviocondicional {
 			System.out.println("Você ESTÁ está apto a votar.");
 		} else {
 			System.out.println("Você NÃO apto a votar!");
+		}
+	}
+	
+	static void exercicio6() {
+		Scanner entradaUser = new Scanner(System.in);
+		System.out.print("Digite o primeiro número: ");
+		int numero1 = entradaUser.nextInt();
+		
+		System.out.print("Digite o segundo número: ");
+		int numero2 = entradaUser.nextInt();
+		
+		System.out.print("Digite o terceiro número: ");
+		int numero3 = entradaUser.nextInt();
+		
+		if (numero1 >= numero2 && numero1 >= numero3) {
+			System.out.println("O maior número é: " + numero1);
+		} else if (numero2 >= numero1 && numero2 >= numero1) {
+			System.out.println("O maior número é: " + numero2);
+		} else {
+			System.out.println("O maior número é: " + numero3);
 		}
 	}
 
