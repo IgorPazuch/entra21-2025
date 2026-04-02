@@ -15,7 +15,8 @@ public class desviocondicional {
 		//exercicio10();
 		//exercicio11();
 		//exercicio12();
-		exercicio13();
+		//exercicio13();
+		exercicio14();
 	}
 	
 	static void exercicio1() {
@@ -256,6 +257,30 @@ public class desviocondicional {
 
         System.out.println("Salário: R$ " + salario);
         System.out.println("Imposto a pagar: R$ " + imposto);
+
+	}
+	
+	static void exercicio14() {
+		Scanner entradaUser = new Scanner(System.in);
+		
+		System.out.print("Qual o valor da compra? ");
+		double valor = entradaUser.nextDouble();
+		
+		double desconto = 0;
+		
+		if (valor <= 100) {
+			desconto = 0;
+		} else if (valor < 500) {
+			desconto = valor * 0.10;
+		} else {
+			desconto = valor * 0.20;
+		}
+		
+		double valorFinal = valor - desconto;
+		
+		System.out.println("Valor da compra: R$ " + valor);
+        System.out.println("Desconto aplicado: R$ " + desconto);
+        System.out.println("Valor final: R$ " + valorFinal);
 
 	}
 				
