@@ -12,7 +12,10 @@ public class desviocondicional {
 		//exercicio7();
 		//exercicio8();
 		//exercicio9();
-		exercicio10();
+		//exercicio10();
+		//exercicio11();
+		//exercicio12();
+		exercicio13();
 	}
 	
 	static void exercicio1() {
@@ -172,7 +175,7 @@ public class desviocondicional {
 		System.out.print("Qual o usuário? ");
 		String admin = entradaUser.next();
 		
-		System.out.print("Qual a senha?" );
+		System.out.print("Qual a senha? ");
 		String senha = entradaUser.next();
 		
 		if (admin.equals(adminCorreto) && senha.equals(senhaCorreta)) {
@@ -181,5 +184,81 @@ public class desviocondicional {
 			System.out.println("Acesso NEGADO");
 		}
 	}
+	
+	static void exercicio11() {
+		 Scanner entradaUser = new Scanner(System.in);
 
-}
+		    System.out.print("Digite um ano: ");
+		    int ano = entradaUser.nextInt();
+
+		    if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+		        System.out.println(ano + " É um ano bissexto");
+		    } else {
+		        System.out.println(ano + " Não é um ano bissexto");
+		    }
+		    
+	}		
+	
+	static void exercicio12() {
+		 Scanner entradaUser = new Scanner(System.in);
+
+		    System.out.print("Digite o primeiro valor: ");
+		    double valor1 = entradaUser.nextDouble();
+
+		    System.out.print("Digite o segundo valor: ");
+		    double valor2 = entradaUser.nextDouble();
+
+		    System.out.print("Qual operação realizar? (+, -, *, /): ");
+		    char operacao = entradaUser.next().charAt(0);
+
+		    double resultado;
+
+		    if (operacao == '+') {
+		        resultado = valor1 + valor2;
+		    } else if (operacao == '-') {
+		        resultado = valor1 - valor2;
+		    } else if (operacao == '*') {
+		        resultado = valor1 * valor2;
+		    } else if (operacao == '/') {
+		        if (valor2 != 0) {
+		            resultado = valor1 / valor2;
+		        } else {
+		            System.out.println("Erro: divisão por zero!");
+		            entradaUser.close();
+		            return;  // sai do método para não usar resultado não inicializado
+		        }
+		    } else {
+		        System.out.println("Operação inválida!");
+		        entradaUser.close();
+		        return;
+		    }
+
+		    System.out.println("Resultado: " + resultado);
+		    entradaUser.close();
+		}
+	
+	static void exercicio13() {
+		Scanner entradaUser = new Scanner(System.in);
+
+        System.out.print("Digite o salário: R$ ");
+        double salario = entradaUser.nextDouble();
+        double imposto = 0;
+        
+        if (salario <= 2000) {
+            imposto = 0;
+        } else if (salario <= 3500) {
+            imposto = salario * 0.10; // 10%
+        } else if (salario <= 5000) {
+            imposto = salario * 0.15; // 15%
+        } else {
+            imposto = salario * 0.20; // 20%
+        }
+
+        System.out.println("Salário: R$ " + salario);
+        System.out.println("Imposto a pagar: R$ " + imposto);
+
+	}
+				
+	
+	}
+
