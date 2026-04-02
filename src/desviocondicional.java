@@ -10,7 +10,9 @@ public class desviocondicional {
 		//exercicio5();
 		//exercicio6();
 		//exercicio7();
-		exercicio8();
+		//exercicio8();
+		//exercicio9();
+		exercicio10();
 	}
 	
 	static void exercicio1() {
@@ -136,6 +138,47 @@ public class desviocondicional {
 		} else { 
 			System.out.println("Não forma um triângulo.");
 			
+		}
+	}
+	
+	static void exercicio9() {
+		Scanner entradaUser = new Scanner(System.in);
+		
+		 System.out.print("Digite o primeiro lado: ");
+	        int lado1 = entradaUser.nextInt();
+	        
+	     System.out.print("Digite o segundo lado: ");
+	        int lado2 = entradaUser.nextInt();
+	        
+	     System.out.print("Digite o terceiro lado: ");
+	        int lado3 = entradaUser.nextInt();
+	        
+	        if (lado1 == lado2 && lado2 == lado3) {
+                System.out.println("Triângulo Equilátero");
+            } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+                System.out.println("Triângulo Isósceles");
+            } else {
+                System.out.println("Triângulo Escaleno");
+            }
+
+	}
+	
+	static void exercicio10() {
+		Scanner entradaUser = new Scanner(System.in);
+		
+		String adminCorreto = "admin";
+		String senhaCorreta = "1234";
+		
+		System.out.print("Qual o usuário? ");
+		String admin = entradaUser.next();
+		
+		System.out.print("Qual a senha?" );
+		String senha = entradaUser.next();
+		
+		if (admin.equals(adminCorreto) && senha.equals(senhaCorreta)) {
+			System.out.println("Acesso permitido");
+		} else {
+			System.out.println("Acesso NEGADO");
 		}
 	}
 
