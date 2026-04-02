@@ -9,7 +9,8 @@ public class desviocondicional {
 		//exercicio4();
 		//exercicio5();
 		//exercicio6();
-		exercicio7();
+		//exercicio7();
+		exercicio8();
 	}
 	
 	static void exercicio1() {
@@ -115,6 +116,26 @@ public class desviocondicional {
 			System.out.println("Bom.");
 		} else {
 			System.out.println("Excelente.");
+		}
+	}
+	
+	static void exercicio8() {
+		Scanner entradaUser = new Scanner(System.in);
+		
+		System.out.println("Digite o valor do primerio lado: ");
+		int lado1 = entradaUser.nextInt();
+		
+		System.out.println("Digite o valor do segundo lado: ");
+		int lado2 = entradaUser.nextInt();
+		
+		System.out.println("Digite o valor do terceiro lado: ");
+		int lado3 = entradaUser.nextInt();
+		
+		if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+			System.out.println("Forma um triângulo!");
+		} else { 
+			System.out.println("Não forma um triângulo.");
+			
 		}
 	}
 
