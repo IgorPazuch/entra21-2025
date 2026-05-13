@@ -90,7 +90,7 @@
                         // fica verde
                         this.style.backgroundColor = "green";
                     }
-                    
+
                     contarAssentos();
                 };
                 
@@ -98,12 +98,16 @@
 
             function contarAssentos() {
                 let contador = 0;
+                let nomes = '';
                 for (let i = 0; i < assentos.length; i++) {
                     if (assentos[i].style.backgroundColor == "green") {
                         contador++;
+                        nomes += assentos[i].innerHTML;
+                        nomes += " ";
                     }
                 }
                 quantidade.innerHTML = contador + " assentos";
+                listaAssentos.innerHTML = nomes;
             }
         </script>
 </body>
