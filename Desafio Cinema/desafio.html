@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="desafio.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sala">
+            <h2>Por favor, escolha seu(s) assentos. </h2>
+
+            <div>
+                <div class="fileira">
+                    <span class="letra">A</span>
+
+                    <button class="assento">A1</button>
+                    <button class="assento">A2</button>
+                    <button class="assento">A3</button>
+                    <button class="assento">A4</button>
+                    <button class="assento">A5</button>
+                    <button class="assento">A6</button>
+                    <button class="assento">A7</button>
+                    <button class="assento">A8</button>
+                    <button class="assento">A9</button>
+                </div>
+
+                <div class="fileira">
+                    <span class="letra">B</span>
+
+                    <button class="assento">B1</button>
+                    <button class="assento">B2</button>
+                    <button class="assento">B3</button>
+                    <button class="assento">B4</button>
+                    <button class="assento">B5</button>
+                    <button class="assento">B6</button>
+                    <button class="assento">B7</button>
+                    <button class="assento">B8</button>
+                    <button class="assento">B9</button>
+                </div>
+
+                <div class="fileira">
+                    <span class="letra">C</span>
+
+                    <button class="assento">C1</button>
+                    <button class="assento">C2</button>
+                    <button class="assento">C3</button>
+                    <button class="assento">C4</button>
+                    <button class="assento">C5</button>
+                    <button class="assento">C6</button>
+                    <button class="assento">C7</button>
+                    <button class="assento">C8</button>
+                    <button class="assento">C9</button>
+                </div>
+            </div>
+            <div class="painel">
+
+                <h3>Assentos selecionados</h3>
+
+                <p id="quantidade">0 assentos</p>
+
+                <div id="lista-assentos">
+                    Nenhum selecionado
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            const assentos = document.querySelectorAll(".assento");
+            const quantidade = document.getElementById("quantidade");
+            const listaAssentos = document.getElementById("lista-assentos");
+
+            for (let i = 0; i < assentos.length; i++) {
+
+                assentos[i].onclick = function () {
+
+                    // verifica a cor atual
+                    if (this.style.backgroundColor == "green") {
+
+                        // volta ao normal
+                        this.style.backgroundColor = "white";
+
+                    } else {
+
+                        // fica verde
+                        this.style.backgroundColor = "green";
+                    }
+                    
+                    contarAssentos();
+                };
+                
+            }
+
+            function contarAssentos() {
+                let contador = 0;
+                for (let i = 0; i < assentos.length; i++) {
+                    if (assentos[i].style.backgroundColor == "green") {
+                        contador++;
+                    }
+                }
+                quantidade.innerHTML = contador + " assentos";
+            }
+        </script>
+</body>
+
+</html>
